@@ -30,6 +30,10 @@ $f3->route('GET /', function() {
     echo $monster->getName();
     $template = new Template();
     echo $template->render('views/home.html');
+
+    $vampire = new Vampire();
+    echo $vampire->attack();
+    echo "<p>" . $vampire->getName() . " has bittin " . $vampire->getVictims() . "</p>";
 });
 
 $f3->run();
