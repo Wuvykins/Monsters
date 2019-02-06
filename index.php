@@ -20,11 +20,10 @@ $f3 = Base::instance();
 //Turn of fat free error reporting
 $f3->set('DEBUG', 3);
 
-require_once('model/data-validation.php');
-
 //Define a default route
 $f3->route('GET /', function() {
     $monster = new Monster();
-    $template = new View();
+    print_r($monster);
+    $template = new Template();
     echo $template->render('views/home.html');
 });
