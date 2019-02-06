@@ -10,7 +10,7 @@ class Monster
 {
     private $_name;
 
-    function __construct($name = 'Ikis')
+    function __construct($name = 'Ickis')
     {
         $this->_name = $name;
     }
