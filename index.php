@@ -34,6 +34,16 @@ $f3->route('GET /', function() {
     $vampire = new Vampire();
     echo $vampire->attack();
     echo "<p>" . $vampire->getName() . " has bittin " . $vampire->getVictims() . "</p>";
+
+    $werewolf = new WereWolf();
+    echo $werewolf->attack();
+    echo "<p>" . $werewolf->getName() . " has scatched " . $werewolf->getTransformed() . "</p>";
+
+    echo $vampire->attack();
+    echo "<p>" . $vampire->getName() . " has bittin " . $vampire->getVictims() . "</p>";
+
+    echo $werewolf->attack();
+    echo "<p>" . $werewolf->getName() . " has scatched " . $werewolf->getTransformed() . "</p>";
 });
 
 $f3->run();
