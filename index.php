@@ -24,7 +24,10 @@ $f3->set('DEBUG', 3);
 //Define a default route
 $f3->route('GET /', function() {
     $monster = new Monster();
-    print_r($monster);
+    echo $monster->attack();
+    echo $monster->getName();
+    $monster->setName("Gizmo");
+    echo $monster->getName();
     $template = new Template();
     echo $template->render('views/home.html');
 });
