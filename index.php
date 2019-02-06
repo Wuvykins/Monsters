@@ -12,7 +12,8 @@ error_reporting(E_ALL);
 
 //Require fat-free
 require_once('vendor/autoload.php');
-session_start();
+require_once('classes/monster.php');
+require_once('classes/vampire.php');
 
 //Create an instance of the Base class
 $f3 = Base::instance();
@@ -27,3 +28,5 @@ $f3->route('GET /', function() {
     $template = new Template();
     echo $template->render('views/home.html');
 });
+
+$f3->run();
