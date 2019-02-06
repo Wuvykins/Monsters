@@ -12,22 +12,18 @@ class Vampire extends Monster {
 
     function __construct($name = 'Ickis')
     {
-        parent::__construct($name);
+        parent::setName($name);
         $this->_victims = 0;
-    }
-
-    function Vampire()
-    {
-
     }
 
     function attack()
     {
-
+        echo "<p>" . $this->getName() . " is biting</p>";
+        $this->_victims++;
     }
 
     function getVictims()
     {
-
+        return $this->_victims;
     }
 }
